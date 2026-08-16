@@ -60,7 +60,7 @@ export function SiteFooter() {
             <span className="brand-mark"><Crown aria-hidden="true" /></span>
             <span>My Locs Thrive</span>
           </a>
-          <p className="footer-purpose">Warm, honest loc education for women who want clarity without pressure.</p>
+          <p className="footer-purpose">Clear, caring loc education for women and girls who want clarity without pressure or perfectionism.</p>
         </div>
         <div>
           <p className="footer-heading">Explore</p>
@@ -79,7 +79,7 @@ export function SiteFooter() {
           <a href="/contact">Contact</a>
         </div>
         <div className="footer-note">
-          <p>Grow healthy locs.<br />Keep your whole self.</p>
+          <p>Grow healthy locs.<br />Enjoy the process.</p>
           <span>General education only. Not personal medical or professional hair-care advice.</span>
         </div>
       </div>

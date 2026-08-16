@@ -20,10 +20,10 @@ import { articles, resourceCategories, siteUrl } from '../content'
 export const Route = createFileRoute('/')({
   head: () => ({
     meta: [
-      { title: 'My Locs Thrive | Begin Your Loc Journey with Clarity' },
-      { name: 'description', content: 'Warm, honest guidance from Dr Lisa, a medical doctor and loc wearer, for women considering locs, caring for starter locs or building a gentler routine.' },
-      { property: 'og:title', content: 'My Locs Thrive | Begin Your Loc Journey with Clarity' },
-      { property: 'og:description', content: 'Calm, honest guidance for beginning and growing locs with clarity, care and confidence.' },
+      { title: 'My Locs Thrive | Grow Healthy Locs and Enjoy the Process' },
+      { name: 'description', content: 'Clear, caring guidance for women and girls who want thriving locs without confusion, pressure or perfectionism.' },
+      { property: 'og:title', content: 'My Locs Thrive | Grow Healthy Locs and Enjoy the Process' },
+      { property: 'og:description', content: 'Clear, caring guidance for growing healthy locs and enjoying the process.' },
       { property: 'og:image', content: `${siteUrl}/images/lisa-hero.jpg` },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: siteUrl },
@@ -35,11 +35,11 @@ export const Route = createFileRoute('/')({
 })
 
 const journeyStages = [
-  { number: '01', title: 'Questioning', text: 'Wondering whether natural hair care could feel simpler and more sustainable.' },
-  { number: '02', title: 'Releasing', text: 'Letting go of routines and expectations that no longer felt healthy or useful.' },
-  { number: '03', title: 'Beginning', text: 'Choosing locs with curiosity, patience and a willingness to learn honestly.' },
-  { number: '04', title: 'Learning', text: 'Asking better questions, checking sources and leaving room for changing my mind.' },
-  { number: '05', title: 'Thriving', text: 'Growing in confidence while making room for questions, change and community.' },
+  { number: '01', title: 'Questioning', text: 'Surely there is a way to enjoy my natural hair consistently?' },
+  { number: '02', title: 'Releasing', text: 'I stopped treating my hair texture and volume like a problem.' },
+  { number: '03', title: 'Beginning', text: 'I chose locs before I felt fully ready.' },
+  { number: '04', title: 'Learning', text: 'Every stage came with learning and asked for patience.' },
+  { number: '05', title: 'Thriving', text: 'Now I’ve reached a stage where I can share my journey.' },
 ]
 
 const principles = [
@@ -112,19 +112,19 @@ function HomePage() {
         <div className="shell hero-grid">
           <div className="hero-copy">
             <p className="eyebrow"><span />A gentler way to begin and grow</p>
-            <h1>Start your loc journey with <em>clarity, care</em> and confidence.</h1>
-            <p className="hero-lead">Warm, honest guidance for women who are considering locs, caring for starter locs or building a kinder long-term routine.</p>
+            <h1>Grow healthy locs. <em>Enjoy the process.</em></h1>
+            <p className="hero-lead">Clear, caring guidance for women and girls who want thriving locs without the confusion, pressure or perfectionism.</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#starter-guide">Get the Gentle Starter Guide <ArrowRight aria-hidden="true" /></a>
               <a className="button button-secondary" href="/resources">Explore beginner resources</a>
             </div>
-            <p className="brand-line">Grow healthy locs. <span>Keep your whole self.</span></p>
+            <p className="brand-line">Honest guidance. <span>No shame. Real life care.</span></p>
           </div>
           <div className="hero-portrait">
             <div className="portrait-frame">
               <img src="/images/lisa-hero.jpg" width="860" height="1075" alt="Dr Lisa smiling, with her long locs clearly visible" fetchPriority="high" />
             </div>
-            <div className="portrait-caption"><span>Dr Lisa</span>Medical doctor and loc wearer, learning out loud.</div>
+            <div className="portrait-caption"><span>Dr Lisa</span>Medical doctor and loc wearer, learning and sharing out loud.</div>
           </div>
         </div>
         <div className="shell trust-strip" aria-label="Our approach">
@@ -136,23 +136,22 @@ function HomePage() {
       <section className="section about-section" id="lisa-story">
         <div className="shell about-grid">
           <div className="about-portrait">
-            <img src="/images/journey-6.jpg" width="680" height="850" alt="Dr Lisa laughing outdoors in a coral dress with her locs worn loose, inviting questions about her loc journey" loading="lazy" />
+            <img src="/images/lisa-evening.png" width="439" height="577" alt="Dr Lisa smiling in a black evening dress with her locs worn loose" loading="lazy" />
           </div>
           <div className="about-copy">
             <p className="eyebrow"><span />Meet Dr Lisa</p>
             <h2>I’m Dr Lisa, and I’m <em>learning right beside you.</em></h2>
-            <p className="large-copy">My Locs Thrive began with a personal question: could caring for my natural hair feel simpler, healthier and more sustainable?</p>
-            <p>As a medical doctor, I have been trained to examine information carefully, explain it plainly and recognise when a concern needs professional attention. As a woman growing locs, I have learned that healthy hair journeys also need patience, realistic expectations and permission to keep learning.</p>
-            <p>So I share what I find, what surprises me and what actually helps, in the hope that it makes your own decisions clearer and kinder.</p>
-            <p className="about-quote">“I’m not here to present a perfect journey. I’m here to make space for an informed one.”</p>
-            <aside className="boundary-note">This platform provides general hair care, lifestyle and wellbeing education. It does not replace personalised advice from a dermatologist, clinician or qualified loctician.</aside>
+            <p className="large-copy">I started my loc journey after years of feeling that caring for my natural hair asked for too much time, tension and frequent changes.</p>
+            <p>Medicine has taught me to value evidence, listen carefully and explain things plainly. Locs taught me process, patience, self-trust and the beauty of simplicity.</p>
+            <p className="about-quote">“You do not need perfect hair knowledge. You need a healthy foundation, curiosity, patience and the will to begin.”</p>
+            <aside className="boundary-note">My Locs Thrive provides general hair care, lifestyle and wellbeing education. It does not replace personal advice from a clinician or qualified loctician.</aside>
           </div>
         </div>
 
         <div className="shell journey-block">
           <div className="section-heading split-heading">
-            <div><p className="eyebrow"><span />The journey, honestly</p><h2>From questioning to thriving.</h2></div>
-            <p>Five stages, in the order they actually happened. No perfect before and after picture.</p>
+            <div><p className="eyebrow"><span />The honest version</p><h2>From questioning to thriving.</h2></div>
+            <p>My locs did not begin as a trend. They began as a question: could caring for my natural hair feel simpler, kinder and more sustainable?</p>
           </div>
           <ol className="journey-timeline">
             {journeyStages.map((stage) => (
@@ -204,7 +203,7 @@ function HomePage() {
             <ul className="guide-list">
               {guideContents.map((item) => <li key={item}><Check aria-hidden="true" />{item}</li>)}
             </ul>
-            <p className="guide-promise">Join the list for first access to the Gentle Starter Guide.</p>
+            <p className="guide-promise">Enter your email and receive the Gentle Starter Guide immediately.</p>
             <EmailForm
               formName="locs-thrive-guide"
               buttonLabel="Get the Gentle Starter Guide"
@@ -213,7 +212,7 @@ function HomePage() {
               source="homepage-guide"
               download
             />
-            <p className="form-fineprint">For adults aged 18 and over. By joining, you also receive Notes From the Journey. Unsubscribe at any time. The guide is educational and does not diagnose scalp or hair conditions.</p>
+            <p className="form-fineprint">Visitors of all ages are welcome to read. Email signup is for adults aged 18 and over. Younger readers can explore with a parent or guardian. By joining, you also receive occasional Notes From the Journey and may unsubscribe at any time. The guide is educational and does not diagnose scalp or hair conditions.</p>
           </div>
         </div>
       </section>
@@ -225,7 +224,7 @@ function HomePage() {
             <p>Practical reading that separates personal experience, professional hair-care questions and concerns that deserve clinical attention.</p>
           </div>
           <div className="article-grid">
-            {articles.map((article, index) => (
+            {articles.slice(0, 3).map((article, index) => (
               <article className={`article-card article-card-${index + 1}`} key={article.slug}>
                 <span className="article-index">0{index + 1}</span>
                 <p className="card-category">{article.category}</p>
@@ -309,19 +308,6 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="section newsletter-section" id="newsletter">
-        <div className="shell newsletter-card">
-          <div>
-            <p className="eyebrow"><span />Notes From the Journey</p>
-            <h2>A thoughtful note, when there is something worth sharing.</h2>
-            <p>Grounded guidance, honest reflections and practical resources for growing healthy locs without unnecessary pressure.</p>
-          </div>
-          <div>
-            <EmailForm formName="locs-thrive-newsletter" buttonLabel="Join Notes From the Journey" successTitle="Welcome to the journey." successMessage="Your email has been added. Look out for occasional thoughtful notes from My Locs Thrive." source="homepage-newsletter" />
-            <p className="form-fineprint">Occasional thoughtful emails. Unsubscribe at any time. Intended for adults aged 18 and over.</p>
-          </div>
-        </div>
-      </section>
     </PageShell>
   )
 }

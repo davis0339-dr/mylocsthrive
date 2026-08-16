@@ -3,4 +3,4 @@ Allow: /
 Disallow: /newsletter-form.html
 Disallow: /downloads/
 
-Sitemap: https://lisamylocsthrive.netlify.app/sitemap.xml
+Sitemap: https://mylocsthrive.netlify.app/sitemap.xml
