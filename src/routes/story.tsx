@@ -23,7 +23,7 @@ const journeyStages = [
   { number: '01', title: 'Questioning', text: 'Surely there is a way to enjoy my natural hair consistently?', image: '/images/journey-questioning.webp', width: 473, height: 630, alt: 'Dr Lisa smiling during an everyday moment with her locs worn loose' },
   { number: '02', title: 'Releasing', text: 'I stopped treating my hair texture and volume like a problem.', image: '/images/journey-releasing.webp', width: 471, height: 624, alt: 'Side view showing the natural volume and texture of Dr Lisa’s locs' },
   { number: '03', title: 'Beginning', text: 'I chose locs before I felt fully ready.', image: '/images/journey-beginning.webp', width: 475, height: 623, alt: 'Dr Lisa’s locs during a salon maintenance appointment' },
-  { number: '04', title: 'Learning', text: 'Every stage came with learning and asked for patience.', image: '/images/journey-learning.webp', width: 466, height: 626, alt: 'Back view showing the length and development of Dr Lisa’s locs' },
+  { number: '04', title: 'Learning', text: 'Every stage came with learning and asked for patience.', image: '/images/journey-learning.webp', width: 804, height: 938, alt: 'Back view showing the length and development of Dr Lisa’s locs' },
   { number: '05', title: 'Thriving', text: 'Now I’ve reached a stage where I can share my journey.', image: '/images/journey-thriving.webp', width: 900, height: 1352, alt: 'Dr Lisa smiling in a studio portrait with her locs styled up' },
 ]
 
