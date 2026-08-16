@@ -10,7 +10,7 @@ function encodeForm(data: Record<string, string>) {
 }
 
 type EmailFormProps = {
-  formName: 'locs-thrive-guide' | 'locs-thrive-newsletter' | 'locs-thrive-circles'
+  formName: 'locs-thrive-guide' | 'locs-thrive-circles'
   buttonLabel: string
   successTitle: string
   successMessage: string
@@ -50,7 +50,7 @@ export function EmailForm({ formName, buttonLabel, successTitle, successMessage,
           <strong>{successTitle}</strong>
           <p>{successMessage}</p>
           {download && (
-            <a className="text-link" href="/downloads/gentle-loc-starter-guide.html" download>
+            <a className="text-link" href="/downloads/gentle-loc-starter-guide.pdf" download>
               Download the guide now <Download aria-hidden="true" />
             </a>
           )}
@@ -64,6 +64,7 @@ export function EmailForm({ formName, buttonLabel, successTitle, successMessage,
       className={`email-form${compact ? ' email-form-compact' : ''}`}
       name={formName}
       method="POST"
+      action="/newsletter-form.html"
       data-netlify="true"
       netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
@@ -121,7 +122,7 @@ export function ContactForm({ children }: { children?: ReactNode }) {
   }
 
   return (
-    <form className="contact-form" name="locs-thrive-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit}>
+    <form className="contact-form" name="locs-thrive-contact" method="POST" action="/newsletter-form.html" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit}>
       <input type="hidden" name="form-name" value="locs-thrive-contact" />
       <div className="honeypot" aria-hidden="true"><label htmlFor={`${id}-bot`}>Do not fill this field</label><input id={`${id}-bot`} name="bot-field" tabIndex={-1} autoComplete="off" /></div>
       <div className="field-grid">

@@ -33,7 +33,7 @@ My Locs Thrive is a single-page editorial marketing site for Dr Lisa's loc educa
 ## Non-Obvious Decisions
 
 - Newsletter submissions must post to `/newsletter-form.html`, not `/`, because TanStack Start's SSR catch-all otherwise intercepts the request before Netlify Forms can process it.
-- The form name `locs-thrive-newsletter` and all field names must stay synchronized between `src/routes/index.tsx` and `public/newsletter-form.html`.
+- The form names `locs-thrive-guide`, `locs-thrive-circles` and `locs-thrive-contact`, together with all field names, must stay synchronized between the React forms and `public/newsletter-form.html`.
 - The horizontal story gallery is intentionally swipeable and uses scroll snapping instead of a JavaScript carousel.
 - The original supplied HTML embedded its photography as base64 data. Those images were extracted into `public/images/` for caching, maintainability, and better page delivery.
 

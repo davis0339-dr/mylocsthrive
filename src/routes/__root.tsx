@@ -6,8 +6,8 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'My Locs Thrive | Evidence-Informed Loc Education' },
-      { name: 'description', content: 'Calm, evidence-informed and experience-led loc education from Dr Lisa.' },
+      { title: 'My Locs Thrive | Grow Healthy Locs and Enjoy the Process' },
+      { name: 'description', content: 'Clear, caring loc guidance from Dr Lisa for women and girls who want thriving locs without pressure or perfectionism.' },
       { name: 'theme-color', content: '#244536' },
       { name: 'color-scheme', content: 'light' },
       { name: 'robots', content: 'index, follow, max-image-preview:large' },

@@ -7,7 +7,9 @@ A warm, editorial website for Dr Lisa's loc education community. The site helps 
 - Responsive, accessible single-page marketing experience
 - Original supplied photography presented in a swipeable loc journey gallery
 - Interactive five-question loc readiness self-check
-- Working newsletter signup powered by Netlify Forms
+- Separate starter-guide and Learning Circles email lists powered by Netlify Forms
+- A downloadable six-page Gentle Starter Guide PDF
+- Five practical beginner resources, with three featured on the homepage
 - Mobile navigation, custom motion, reduced-motion support, and clear focus states
 - Custom metadata and branded crown favicon
 
