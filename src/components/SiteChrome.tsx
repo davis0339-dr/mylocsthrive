@@ -2,11 +2,11 @@ import { ArrowRight, Crown, Menu, X } from 'lucide-react'
 import { useState, type ReactNode } from 'react'
 
 const navigation = [
-  { label: 'Start Here', href: '/#start' },
-  { label: 'Lisa’s Story', href: '/#lisa-story' },
+  { label: 'Home', href: '/' },
+  { label: 'Lisa’s Story', href: '/story' },
   { label: 'Resources', href: '/resources' },
-  { label: 'Self-Check', href: '/#self-check' },
-  { label: 'Community', href: '/#community' },
+  { label: 'Self Check', href: '/self-check' },
+  { label: 'Community', href: '/community' },
 ]
 
 export function SiteHeader() {
@@ -64,11 +64,11 @@ export function SiteFooter() {
         </div>
         <div>
           <p className="footer-heading">Explore</p>
-          <a href="/#start">Start Here</a>
-          <a href="/#lisa-story">Lisa’s Story</a>
+          <a href="/">Home</a>
+          <a href="/story">Lisa’s Story</a>
           <a href="/resources">Resources</a>
-          <a href="/#self-check">Self-Check</a>
-          <a href="/#community">Community</a>
+          <a href="/self-check">Self Check</a>
+          <a href="/community">Community</a>
         </div>
         <div>
           <p className="footer-heading">Information</p>
