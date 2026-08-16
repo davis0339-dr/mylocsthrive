@@ -50,9 +50,14 @@ export function EmailForm({ formName, buttonLabel, successTitle, successMessage,
           <strong>{successTitle}</strong>
           <p>{successMessage}</p>
           {download && (
-            <a className="text-link" href="/downloads/gentle-loc-starter-guide.pdf" download>
-              Download the guide now <Download aria-hidden="true" />
-            </a>
+            <div className="download-links">
+              <a className="text-link" href="/downloads/gentle-loc-starter-guide.pdf" download>
+                Download the guide <Download aria-hidden="true" />
+              </a>
+              <a className="text-link" href="/downloads/gentle-starter-locs-checklist.pdf" download>
+                Download the checklist <Download aria-hidden="true" />
+              </a>
+            </div>
           )}
         </div>
       </div>

@@ -24,7 +24,7 @@ export function SiteHeader() {
           {navigation.map((item) => <a key={item.label} href={item.href}>{item.label}</a>)}
         </nav>
         <a className="button button-primary header-cta" href="/#starter-guide">
-          Get the Gentle Starter Guide <ArrowRight aria-hidden="true" />
+          Get the free starter pack <ArrowRight aria-hidden="true" />
         </a>
         <button
           className="menu-toggle"
@@ -43,7 +43,7 @@ export function SiteHeader() {
             <a key={item.label} href={item.href} onClick={() => setMenuOpen(false)}>{item.label}</a>
           ))}
           <a className="button button-primary" href="/#starter-guide" onClick={() => setMenuOpen(false)}>
-            Get the Gentle Starter Guide
+            Get the free starter pack
           </a>
         </nav>
       )}

@@ -10,7 +10,6 @@ import {
   HeartHandshake,
   SearchCheck,
   ShieldCheck,
-  Sparkles,
 } from 'lucide-react'
 import { useState } from 'react'
 import { EmailForm } from '../components/NetlifyForm'
@@ -24,7 +23,7 @@ export const Route = createFileRoute('/')({
       { name: 'description', content: 'Clear, caring guidance for women and girls who want thriving locs without confusion, pressure or perfectionism.' },
       { property: 'og:title', content: 'My Locs Thrive | Grow Healthy Locs and Enjoy the Process' },
       { property: 'og:description', content: 'Clear, caring guidance for growing healthy locs and enjoying the process.' },
-      { property: 'og:image', content: `${siteUrl}/images/lisa-hero.jpg` },
+      { property: 'og:image', content: `${siteUrl}/images/lisa-studio-hero.webp` },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: siteUrl },
       { name: 'twitter:card', content: 'summary_large_image' },
@@ -35,11 +34,51 @@ export const Route = createFileRoute('/')({
 })
 
 const journeyStages = [
-  { number: '01', title: 'Questioning', text: 'Surely there is a way to enjoy my natural hair consistently?' },
-  { number: '02', title: 'Releasing', text: 'I stopped treating my hair texture and volume like a problem.' },
-  { number: '03', title: 'Beginning', text: 'I chose locs before I felt fully ready.' },
-  { number: '04', title: 'Learning', text: 'Every stage came with learning and asked for patience.' },
-  { number: '05', title: 'Thriving', text: 'Now I’ve reached a stage where I can share my journey.' },
+  {
+    number: '01',
+    title: 'Questioning',
+    text: 'Surely there is a way to enjoy my natural hair consistently?',
+    image: '/images/journey-questioning.webp',
+    width: 473,
+    height: 630,
+    alt: 'Dr Lisa smiling during an everyday moment with her locs worn loose',
+  },
+  {
+    number: '02',
+    title: 'Releasing',
+    text: 'I stopped treating my hair texture and volume like a problem.',
+    image: '/images/journey-releasing.webp',
+    width: 471,
+    height: 624,
+    alt: 'Side view showing the natural volume and texture of Dr Lisa’s locs',
+  },
+  {
+    number: '03',
+    title: 'Beginning',
+    text: 'I chose locs before I felt fully ready.',
+    image: '/images/journey-beginning.webp',
+    width: 475,
+    height: 623,
+    alt: 'Dr Lisa’s locs during a salon maintenance appointment',
+  },
+  {
+    number: '04',
+    title: 'Learning',
+    text: 'Every stage came with learning and asked for patience.',
+    image: '/images/journey-learning.webp',
+    width: 466,
+    height: 626,
+    alt: 'Back view showing the length and development of Dr Lisa’s locs',
+  },
+  {
+    number: '05',
+    title: 'Thriving',
+    text: 'Now I’ve reached a stage where I can share my journey.',
+    image: '/images/journey-thriving.webp',
+    width: 900,
+    height: 1352,
+    alt: 'Dr Lisa smiling in a studio portrait with her locs styled up',
+  },
 ]
 
 const principles = [
@@ -50,13 +89,10 @@ const principles = [
 ]
 
 const guideContents = [
-  'Questions to ask before starting',
-  'An overview of common establishment methods',
-  'What to discuss during a loctician consultation',
-  'A first-month care checklist',
-  'Common myths and unrealistic expectations',
-  'Situations that may require professional advice',
-  'Space to record personal goals and questions',
+  'Lisa’s 9-page Gentle Starter Guide to Locs',
+  'A practical pre-starting locs checklist',
+  'A clear post one-month progress checklist',
+  'Prompts to help you begin calmly and ask better questions',
 ]
 
 const quizQuestions = [
@@ -102,7 +138,7 @@ function HomePage() {
         '@context': 'https://schema.org',
         '@graph': [
           { '@type': 'Organization', '@id': `${siteUrl}/#organization`, name: 'My Locs Thrive', url: siteUrl, logo: `${siteUrl}/favicon.svg` },
-          { '@type': 'Person', '@id': `${siteUrl}/#lisa`, name: 'Dr Lisa', description: 'Medical doctor, loc wearer and founder of My Locs Thrive.', image: `${siteUrl}/images/lisa-hero.jpg`, worksFor: { '@id': `${siteUrl}/#organization` } },
+          { '@type': 'Person', '@id': `${siteUrl}/#lisa`, name: 'Dr Lisa', description: 'Medical doctor, loc wearer and founder of My Locs Thrive.', image: `${siteUrl}/images/lisa-studio-hero.webp`, worksFor: { '@id': `${siteUrl}/#organization` } },
           { '@type': 'ProfilePage', name: 'Meet Dr Lisa', url: `${siteUrl}/#lisa-story`, mainEntity: { '@id': `${siteUrl}/#lisa` } },
           { '@type': 'WebSite', name: 'My Locs Thrive', url: siteUrl, publisher: { '@id': `${siteUrl}/#organization` } },
         ],
@@ -115,14 +151,14 @@ function HomePage() {
             <h1>Grow healthy locs. <em>Enjoy the process.</em></h1>
             <p className="hero-lead">Clear, caring guidance for women and girls who want thriving locs without the confusion, pressure or perfectionism.</p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#starter-guide">Get the Gentle Starter Guide <ArrowRight aria-hidden="true" /></a>
+              <a className="button button-primary" href="#starter-guide">Get the free starter pack <ArrowRight aria-hidden="true" /></a>
               <a className="button button-secondary" href="/resources">Explore beginner resources</a>
             </div>
             <p className="brand-line">Honest guidance. <span>No shame. Real life care.</span></p>
           </div>
           <div className="hero-portrait">
             <div className="portrait-frame">
-              <img src="/images/lisa-hero.jpg" width="860" height="1075" alt="Dr Lisa smiling, with her long locs clearly visible" fetchPriority="high" />
+              <img src="/images/lisa-studio-hero.webp" width="1200" height="1424" alt="Dr Lisa smiling with her locs styled in an elegant updo" fetchPriority="high" />
             </div>
             <div className="portrait-caption"><span>Dr Lisa</span>Medical doctor and loc wearer, learning and sharing out loud.</div>
           </div>
@@ -136,7 +172,7 @@ function HomePage() {
       <section className="section about-section" id="lisa-story">
         <div className="shell about-grid">
           <div className="about-portrait">
-            <img src="/images/lisa-evening.png" width="439" height="577" alt="Dr Lisa smiling in a black evening dress with her locs worn loose" loading="lazy" />
+            <img src="/images/lisa-candid.webp" width="900" height="1600" alt="Dr Lisa smiling naturally with her locs worn loose" loading="lazy" />
           </div>
           <div className="about-copy">
             <p className="eyebrow"><span />Meet Dr Lisa</p>
@@ -156,12 +192,18 @@ function HomePage() {
           <ol className="journey-timeline">
             {journeyStages.map((stage) => (
               <li key={stage.number}>
-                <span className="journey-number">{stage.number}.</span>
-                <h3>{stage.title}</h3>
-                <p>{stage.text}</p>
+                <figure className="journey-photo">
+                  <img src={stage.image} width={stage.width} height={stage.height} alt={stage.alt} loading="lazy" />
+                </figure>
+                <div className="journey-copy">
+                  <span className="journey-number">{stage.number}.</span>
+                  <h3>{stage.title}</h3>
+                  <p>{stage.text}</p>
+                </div>
               </li>
             ))}
           </ol>
+          <p className="swipe-hint">Swipe to follow the journey</p>
         </div>
       </section>
 
@@ -186,33 +228,33 @@ function HomePage() {
 
       <section className="section guide-section" id="starter-guide">
         <div className="shell guide-grid">
-          <div className="guide-preview" aria-hidden="true">
-            <div className="guide-sheet guide-sheet-back" />
-            <div className="guide-sheet guide-sheet-front">
-              <span>My Locs Thrive</span>
-              <div className="guide-mark"><Sparkles /></div>
-              <h3>The Gentle<br />Starter Guide</h3>
-              <p>A calm place to begin.</p>
-              <small>Prepared by Dr Lisa</small>
-            </div>
+          <div className="guide-preview" aria-label="The Gentle Starter Guide and Gentle Starter Locs Checklist">
+            <figure className="pack-cover pack-cover-guide">
+              <img src="/images/gentle-guide-cover.webp" width="760" height="1074" alt="Cover of Lisa’s Gentle Starter Guide to Locs" loading="lazy" />
+              <figcaption>9-page guide</figcaption>
+            </figure>
+            <figure className="pack-cover pack-cover-checklist">
+              <img src="/images/gentle-checklist-cover.webp" width="760" height="1075" alt="Cover of Lisa’s Gentle Starter Locs Checklist" loading="lazy" />
+              <figcaption>3-page checklist</figcaption>
+            </figure>
           </div>
           <div className="guide-copy">
-            <p className="eyebrow light"><span />The free starter guide</p>
-            <h2>The Gentle Starter Guide</h2>
-            <p className="large-copy">A calm, practical starting point for understanding locs, asking better questions and beginning with confidence.</p>
+            <p className="eyebrow light"><span />Two free resources</p>
+            <h2>The Gentle Starter Pack</h2>
+            <p className="large-copy">Lisa’s branded guide and practical checklists give you a calm place to learn, prepare and notice your progress.</p>
             <ul className="guide-list">
               {guideContents.map((item) => <li key={item}><Check aria-hidden="true" />{item}</li>)}
             </ul>
-            <p className="guide-promise">Enter your email and receive the Gentle Starter Guide immediately.</p>
+            <p className="guide-promise">Enter your email once and receive both resources immediately.</p>
             <EmailForm
               formName="locs-thrive-guide"
-              buttonLabel="Get the Gentle Starter Guide"
+              buttonLabel="Get the free starter pack"
               successTitle="You’re on the list."
-              successMessage="Thank you. You can open the guide straight away using the link below."
+              successMessage="Thank you. Your guide and checklist are ready below."
               source="homepage-guide"
               download
             />
-            <p className="form-fineprint">Visitors of all ages are welcome to read. Email signup is for adults aged 18 and over. Younger readers can explore with a parent or guardian. By joining, you also receive occasional Notes From the Journey and may unsubscribe at any time. The guide is educational and does not diagnose scalp or hair conditions.</p>
+            <p className="form-fineprint">Visitors of all ages are welcome to read. Email signup is for adults aged 18 and over. Younger readers can explore with a parent or guardian. By joining, you also receive occasional Notes From the Journey and may unsubscribe at any time. Both resources are educational and do not diagnose scalp or hair conditions.</p>
           </div>
         </div>
       </section>
@@ -276,11 +318,11 @@ function HomePage() {
                     <p>{result.text}</p>
                     <div className="result-links">
                       {result.resources.map((resource) => <a key={resource.slug} href={`/resources/${resource.slug}`}>{resource.title} <ArrowRight aria-hidden="true" /></a>)}
-                      <a href="#starter-guide">Get the Gentle Starter Guide <Download aria-hidden="true" /></a>
+                      <a href="#starter-guide">Get the free starter pack <Download aria-hidden="true" /></a>
                     </div>
                     <details className="result-signup">
                       <summary>Send these next steps to my email</summary>
-                      <EmailForm formName="locs-thrive-guide" buttonLabel="Get the Gentle Starter Guide" successTitle="You’re on the list." successMessage="Open the Gentle Starter Guide below and continue at your own pace." source={`self-check-${result.title.toLowerCase().replaceAll(' ', '-')}`} compact download />
+                      <EmailForm formName="locs-thrive-guide" buttonLabel="Get the free starter pack" successTitle="You’re on the list." successMessage="Your guide and checklist are ready below." source={`self-check-${result.title.toLowerCase().replaceAll(' ', '-')}`} compact download />
                     </details>
                   </div>
                 </>
