@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://mylocsthrive.netlify.app/</loc><lastmod>2026-08-17</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mylocsthrive.netlify.app/story</loc><lastmod>2026-08-17</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://mylocsthrive.netlify.app/resources</loc><lastmod>2026-08-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mylocsthrive.netlify.app/self-check</loc><lastmod>2026-08-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mylocsthrive.netlify.app/community</loc><lastmod>2026-08-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://mylocsthrive.netlify.app/resources/should-i-start-locs</loc><lastmod>2026-08-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://mylocsthrive.netlify.app/resources/your-first-30-days</loc><lastmod>2026-08-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://mylocsthrive.netlify.app/resources/is-this-normal</loc><lastmod>2026-08-17</lastmod><priority>0.8</priority></url>

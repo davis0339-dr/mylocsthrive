@@ -46,7 +46,7 @@ function ArticlePage() {
         datePublished: article.publishedIso,
         dateModified: article.reviewedIso,
         mainEntityOfPage: url,
-        author: { '@type': 'Person', name: 'Dr Lisa', url: `${siteUrl}/#lisa-story` },
+        author: { '@type': 'Person', name: 'Dr Lisa', url: `${siteUrl}/story` },
         publisher: { '@type': 'Organization', name: 'My Locs Thrive', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/favicon.svg` } },
         image: `${siteUrl}/images/lisa-hero.jpg`,
       }} />

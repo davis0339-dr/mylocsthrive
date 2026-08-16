@@ -10,9 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as StoryRouteImport } from './routes/story'
+import { Route as SelfCheckRouteImport } from './routes/self-check'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as DisclosuresRouteImport } from './routes/disclosures'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as CommunityRouteImport } from './routes/community'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ResourcesIndexRouteImport } from './routes/resources/index'
@@ -21,6 +24,16 @@ import { Route as ResourcesSlugRouteImport } from './routes/resources/$slug'
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoryRoute = StoryRouteImport.update({
+  id: '/story',
+  path: '/story',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SelfCheckRoute = SelfCheckRouteImport.update({
+  id: '/self-check',
+  path: '/self-check',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -36,6 +49,11 @@ const DisclosuresRoute = DisclosuresRouteImport.update({
 const DisclaimerRoute = DisclaimerRouteImport.update({
   id: '/disclaimer',
   path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CommunityRoute = CommunityRouteImport.update({
+  id: '/community',
+  path: '/community',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -61,20 +79,26 @@ const ResourcesSlugRoute = ResourcesSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/community': typeof CommunityRoute
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/disclosures': typeof DisclosuresRoute
   '/privacy': typeof PrivacyRoute
+  '/self-check': typeof SelfCheckRoute
+  '/story': typeof StoryRoute
   '/terms': typeof TermsRoute
   '/resources/$slug': typeof ResourcesSlugRoute
   '/resources/': typeof ResourcesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/community': typeof CommunityRoute
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/disclosures': typeof DisclosuresRoute
   '/privacy': typeof PrivacyRoute
+  '/self-check': typeof SelfCheckRoute
+  '/story': typeof StoryRoute
   '/terms': typeof TermsRoute
   '/resources/$slug': typeof ResourcesSlugRoute
   '/resources': typeof ResourcesIndexRoute
@@ -82,10 +106,13 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/community': typeof CommunityRoute
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/disclosures': typeof DisclosuresRoute
   '/privacy': typeof PrivacyRoute
+  '/self-check': typeof SelfCheckRoute
+  '/story': typeof StoryRoute
   '/terms': typeof TermsRoute
   '/resources/$slug': typeof ResourcesSlugRoute
   '/resources/': typeof ResourcesIndexRoute
@@ -94,30 +121,39 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/community'
     | '/contact'
     | '/disclaimer'
     | '/disclosures'
     | '/privacy'
+    | '/self-check'
+    | '/story'
     | '/terms'
     | '/resources/$slug'
     | '/resources/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/community'
     | '/contact'
     | '/disclaimer'
     | '/disclosures'
     | '/privacy'
+    | '/self-check'
+    | '/story'
     | '/terms'
     | '/resources/$slug'
     | '/resources'
   id:
     | '__root__'
     | '/'
+    | '/community'
     | '/contact'
     | '/disclaimer'
     | '/disclosures'
     | '/privacy'
+    | '/self-check'
+    | '/story'
     | '/terms'
     | '/resources/$slug'
     | '/resources/'
@@ -125,10 +161,13 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CommunityRoute: typeof CommunityRoute
   ContactRoute: typeof ContactRoute
   DisclaimerRoute: typeof DisclaimerRoute
   DisclosuresRoute: typeof DisclosuresRoute
   PrivacyRoute: typeof PrivacyRoute
+  SelfCheckRoute: typeof SelfCheckRoute
+  StoryRoute: typeof StoryRoute
   TermsRoute: typeof TermsRoute
   ResourcesSlugRoute: typeof ResourcesSlugRoute
   ResourcesIndexRoute: typeof ResourcesIndexRoute
@@ -141,6 +180,20 @@ declare module '@tanstack/react-router' {
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/story': {
+      id: '/story'
+      path: '/story'
+      fullPath: '/story'
+      preLoaderRoute: typeof StoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/self-check': {
+      id: '/self-check'
+      path: '/self-check'
+      fullPath: '/self-check'
+      preLoaderRoute: typeof SelfCheckRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -162,6 +215,13 @@ declare module '@tanstack/react-router' {
       path: '/disclaimer'
       fullPath: '/disclaimer'
       preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/community': {
+      id: '/community'
+      path: '/community'
+      fullPath: '/community'
+      preLoaderRoute: typeof CommunityRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -197,10 +257,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CommunityRoute: CommunityRoute,
   ContactRoute: ContactRoute,
   DisclaimerRoute: DisclaimerRoute,
   DisclosuresRoute: DisclosuresRoute,
   PrivacyRoute: PrivacyRoute,
+  SelfCheckRoute: SelfCheckRoute,
+  StoryRoute: StoryRoute,
   TermsRoute: TermsRoute,
   ResourcesSlugRoute: ResourcesSlugRoute,
   ResourcesIndexRoute: ResourcesIndexRoute,

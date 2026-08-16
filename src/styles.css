@@ -112,8 +112,11 @@ em { color: var(--rose); font-weight: 400; }
 .about-copy h2 { max-width: 760px; margin-bottom: 32px; font-size: clamp(2.5rem, 4.4vw, 4rem); }
 .about-copy > p { max-width: 750px; color: #48524c; font-size: 1.01rem; }
 .about-copy > p.about-quote { max-width: 640px; margin: 34px 0 0; padding-left: 24px; border-left: 3px solid var(--rose); color: var(--forest); font-family: var(--display); font-size: clamp(1.18rem, 2vw, 1.5rem); line-height: 1.45; }
+.home-about .about-copy .button { margin-top: 18px; }
 .boundary-note { margin-top: 34px; padding: 21px 24px; border-left: 3px solid var(--moss); background: var(--cream); color: #495149; font-size: .88rem; }
 .journey-block { margin-top: 140px; }
+.journey-page-section { background: var(--paper); border-top: 1px solid var(--line); }
+.journey-page-section .journey-block { margin-top: 0; }
 .journey-timeline { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; padding: 0; margin: 0; list-style: none; }
 .journey-timeline li { min-width: 0; display: flex; flex-direction: column; background: var(--cream); border: 1px solid var(--line); }
 .journey-photo { aspect-ratio: 4 / 5; margin: 0; overflow: hidden; background: var(--sage-soft); }
@@ -228,6 +231,16 @@ em { color: var(--rose); font-weight: 400; }
 .community-card > p { color: var(--muted); font-size: .9rem; }
 .community-card .email-row { flex-direction: column; }
 .community-card .button { width: 100%; }
+
+.pathways-section { background: var(--sage-soft); }
+.pathways-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.pathway-card { min-height: 300px; display: flex; flex-direction: column; padding: 38px 34px; border-top: 3px solid var(--forest); background: var(--paper); }
+.pathway-card:nth-child(2) { border-color: var(--rose); }
+.pathway-card:nth-child(3) { border-color: var(--gold); }
+.pathway-card > svg { width: 34px; height: 34px; margin-bottom: 42px; color: var(--rose); stroke-width: 1.5; }
+.pathway-card h3 { margin-bottom: 12px; color: var(--forest); font-family: var(--display); font-size: 1.8rem; font-weight: 500; }
+.pathway-card p { color: var(--muted); font-size: .9rem; }
+.pathway-card .text-link { align-self: flex-start; margin-top: auto; }
 
 .newsletter-section { padding-top: 0; background: var(--paper); }
 .newsletter-card { display: grid; grid-template-columns: 1fr .9fr; align-items: center; gap: 75px; padding: 65px 70px; background: var(--rose-soft); border-radius: 4px 50px 4px 4px; }
@@ -361,6 +374,7 @@ input:focus, textarea:focus { border-color: var(--forest); outline: 3px solid rg
   .hero-grid { grid-template-columns: 1.05fr .8fr; gap: 55px; }
   .hero-copy h1 { font-size: clamp(3.6rem, 7vw, 5.6rem); }
   .principles-grid { grid-template-columns: 1fr 1fr; }
+  .pathways-grid { grid-template-columns: 1fr 1fr; }
   .article-layout { grid-template-columns: 190px minmax(0, 700px); gap: 45px; }
 }
 
@@ -392,6 +406,8 @@ input:focus, textarea:focus { border-color: var(--forest); outline: 3px solid rg
   .guide-grid { gap: 65px; }
   .guide-preview { width: min(100%, 560px); min-height: 570px; justify-self: center; }
   .article-grid { grid-template-columns: 1fr; }
+  .pathways-grid { grid-template-columns: 1fr; }
+  .pathway-card { min-height: 250px; }
   .article-card { min-height: 330px; }
   .self-check-intro { position: static; }
   .community-grid { gap: 55px; }
